@@ -6,9 +6,9 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CashFlowProWeb",
-  description: "app de gestão"
-}
+  title: "Cash Flow Pro",
+  description: "App de controle de gastos pessoais",
+};
 
 export default function RootLayout({
   children,
@@ -17,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="dark">
-      <body>
+      <body className={inter.className}>
         <Providers>
-        {children}
+          {children}
         </Providers>
-        </body>
+      </body>
     </html>
   );
 }
